@@ -13,7 +13,6 @@ public class HeartNote : MonoBehaviour
     private void Start()
     {
         heartbeat = GameObject.Find("Heartbeat").GetComponent<Heartbeat>();
-        if (heartbeat.started) return;
 
         heartbeat.StartFirstAfter(indicatorTime);
         timer = 0;

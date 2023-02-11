@@ -8,6 +8,10 @@ public class Heartbeat : MonoBehaviour
     public float allowance = 0.1f;
     public float timer;
     public bool started;
+
+    public delegate void OnBeat();
+    public OnBeat onBeat;
+    private bool onBeatInvoked;
     
     private void Start()
     {
@@ -17,6 +21,7 @@ public class Heartbeat : MonoBehaviour
         }
         
         started = false;
+        onBeatInvoked = false;
     }
 
     private void Update()
@@ -24,21 +29,27 @@ public class Heartbeat : MonoBehaviour
         if (!started) return;
         
         timer -= Time.deltaTime;
-    }
-
-    private void LateUpdate()
-    {
+        
         if (timer <= 0)
         {
             timer += interval;
+        }
+        else if (timer <= allowance / 2f && !onBeatInvoked)
+        {
+            onBeat?.Invoke();
+            onBeatInvoked = true;
+        }
+        else if (timer > allowance)
+        {
+            onBeatInvoked = false;
         }
     }
 
     public bool IsBeat()
     {
-        return started && (timer <= allowance / 2f || timer >= interval - allowance / 2f && timer <= interval);
+        return started && timer <= allowance;
     }
-    
+
     public void StartFirstAfter(float seconds)
     {
         started = true;
