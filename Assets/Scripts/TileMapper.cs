@@ -7,7 +7,8 @@ using Random = UnityEngine.Random;
 
 public class TileMapper : MonoBehaviour
 {
-    public string mapFilePath;
+    [Multiline]
+    public string mapString;
     public List<GameObject> tileSprites;
     public List<GameObject> foodSprites;
     public Vector3 playerPosition;
@@ -26,15 +27,7 @@ public class TileMapper : MonoBehaviour
 
     private void Awake()
     {
-        var fullPath = $"{Application.streamingAssetsPath}/{mapFilePath}";
-
-        if (!File.Exists(fullPath))
-        {
-            Debug.LogError("Map file not found at " + fullPath);
-            return;
-        }
-
-        var fileData = File.ReadAllText(fullPath);
+        var fileData = mapString;
         var lines = fileData.Split('\n');
         string[] lineData = null;
         int mapEnd = 0; // Probably not a good fix. Open to improvements  -Eric
