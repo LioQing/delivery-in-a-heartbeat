@@ -34,7 +34,7 @@ public class Heartbeat : MonoBehaviour
         {
             timer += interval;
         }
-        else if (timer <= allowance / 2f && !onBeatInvoked)
+        else if (timer <= allowance / 4f && !onBeatInvoked)
         {
             onBeat?.Invoke();
             onBeatInvoked = true;
@@ -47,7 +47,7 @@ public class Heartbeat : MonoBehaviour
 
     public bool IsBeat()
     {
-        return started && timer <= allowance;
+        return started && (timer <= allowance / 2f || timer >= interval - allowance / 2f && timer <= interval + allowance / 2f);
     }
 
     public void StartFirstAfter(float seconds)

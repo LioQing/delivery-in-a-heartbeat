@@ -10,6 +10,9 @@ public class TileMapper : MonoBehaviour
     public string mapFilePath;
     public List<GameObject> tileSprites;
     public List<GameObject> foodSprites;
+    public Vector3 playerPosition;
+    public Vector3 exitPosition;
+    public int nextMap;
 
     private void CreateFoodObj(int x, int y)
     {
@@ -19,7 +22,7 @@ public class TileMapper : MonoBehaviour
         foodObject.transform.position = new Vector3(x, y);
     }
 
-    private void Start()
+    private void Awake()
     {
         var fullPath = $"{Application.streamingAssetsPath}/{mapFilePath}";
            
@@ -65,7 +68,6 @@ public class TileMapper : MonoBehaviour
                         Debug.Log("Instatiated food, x: " + int.Parse(lineData[1]) + ", y: {0}" + int.Parse(lineData[2]) + " loop: " + y);
                         CreateFoodObj(int.Parse(lineData[1]), -int.Parse(lineData[2]));
                     }
-
                     else
                         Debug.Log("Unknown item id. Loop: " + y);
                 }
