@@ -5,13 +5,18 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public int score;
+
     private Heartbeat heartbeat;
     private TMP_Text text;
+    private TMP_Text scoreText;
 
     private void Start()
     {
         heartbeat = GameObject.Find("Heartbeat").GetComponent<Heartbeat>();
         text = GameObject.Find("DebugText").GetComponent<TMP_Text>();
+        scoreText = GameObject.Find("Score").GetComponent<TMP_Text>();
+        score = 0;
     }
     
     private void Update()
@@ -40,32 +45,46 @@ public class PlayerController : MonoBehaviour
             moved = true;
         }
 
-        if (heartbeat.IsBeat() && moved)
+        if (moved)
         {
-            transform.Translate(move);
-            text.color = Color.red;
-            text.text = "Beat!";
-        }
-        else if (moved)
-        {
-            switch (Random.Range(0, 4))
+            if (heartbeat.IsBeat() && moved)
             {
-                case 0:
-                    transform.position += new Vector3(0, 1);
-                    break;
-                case 1:
-                    transform.position += new Vector3(0, -1);
-                    break;
-                case 2:
-                    transform.position += new Vector3(-1, 0);
-                    break;
-                case 3:
-                    transform.position += new Vector3(1, 0);
-                    break;
+                transform.Translate(move);
+                text.color = Color.red;
+                text.text = "Beat!";
             }
+            else if (moved)
+            {
+                switch (Random.Range(0, 4))
+                {
+                    case 0:
+                        transform.position += new Vector3(0, 1);
+                        break;
+                    case 1:
+                        transform.position += new Vector3(0, -1);
+                        break;
+                    case 2:
+                        transform.position += new Vector3(-1, 0);
+                        break;
+                    case 3:
+                        transform.position += new Vector3(1, 0);
+                        break;
+                }
 
-            text.color = Color.white;
-            text.text = "Missed!";
+                text.color = Color.white;
+                text.text = "Missed!";
+            }
+            
+            var food = GameObject.FindGameObjectsWithTag("Food");
+            foreach (var f in food)
+            {
+                if (f.transform.position == transform.position)
+                {
+                    Destroy(f);
+                    score++;
+                    scoreText.text = $"No. of Food: {score}";
+                }
+            }
         }
     }
 }
