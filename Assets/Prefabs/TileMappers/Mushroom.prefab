@@ -46,8 +46,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mapFilePath: TileMaps/Mushroom.txt
   tileSprites:
-  - {fileID: 8988736779684131486, guid: 1308710ce6720234181c9809bca4c1a7, type: 3}
   - {fileID: 8988736779684131486, guid: bfdabd5b5522fed44a353e088a449ee5, type: 3}
+  - {fileID: 8988736779684131486, guid: 1308710ce6720234181c9809bca4c1a7, type: 3}
   - {fileID: 8988736779684131486, guid: c6635a91464a49046b790b0dfe0e4e24, type: 3}
   - {fileID: 8988736779684131486, guid: c2aacb2b185a4ca438ea5f55f72bda60, type: 3}
   - {fileID: 8988736779684131486, guid: b6c57bdf3c12f3346b57fce4a763bf84, type: 3}
@@ -59,6 +59,7 @@ MonoBehaviour:
   - {fileID: 5194250471532313980, guid: ff386ba30ffe68549b72577c7e6a864a, type: 3}
   - {fileID: 6835564312421841422, guid: b1abd123a3b34964b858fe9e8e0aeb3b, type: 3}
   - {fileID: 1478597199021968787, guid: 241dc6972b77345459f428c14088018e, type: 3}
-  playerPosition: {x: 6, y: -3, z: 0}
-  exitPosition: {x: 12, y: -7, z: 0}
+  playerPosition: {x: 1, y: -1, z: 0}
+  exitPosition: {x: 7, y: -7, z: 0}
   nextMap: 2
+  girl: {fileID: 0}

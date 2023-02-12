@@ -51,6 +51,7 @@ MonoBehaviour:
   - {fileID: 8988736779684131486, guid: c08df2d3eb45fce4bbc1e2357493926e, type: 3}
   - {fileID: 8988736779684131486, guid: c77abe22e163e2e4ea794f1d6b78a5e5, type: 3}
   - {fileID: 8988736779684131486, guid: d9e79aac296bbeb45b328c1552db3566, type: 3}
+  - {fileID: 8988736779684131486, guid: 02890489a46e1b747a69d843613dad29, type: 3}
   - {fileID: 8988736779684131486, guid: e8e5a528694f9084e8808f764e3d3903, type: 3}
   - {fileID: 8988736779684131486, guid: 081dba27a551efe4bae73ab92d75dfad, type: 3}
   - {fileID: 8988736779684131486, guid: 849839a865c00094ebc31f88ad44e820, type: 3}
@@ -61,6 +62,7 @@ MonoBehaviour:
   - {fileID: 5194250471532313980, guid: ff386ba30ffe68549b72577c7e6a864a, type: 3}
   - {fileID: 6835564312421841422, guid: b1abd123a3b34964b858fe9e8e0aeb3b, type: 3}
   - {fileID: 1478597199021968787, guid: 241dc6972b77345459f428c14088018e, type: 3}
-  playerPosition: {x: 6, y: -3, z: 0}
-  exitPosition: {x: 12, y: -7, z: 0}
+  playerPosition: {x: 1, y: -1, z: 0}
+  exitPosition: {x: 7, y: -1, z: 0}
   nextMap: 1
+  girl: {fileID: 0}
