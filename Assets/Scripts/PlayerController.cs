@@ -127,6 +127,9 @@ public class PlayerController : MonoBehaviour
                     transform.position -= move * 0.01f;
                     stunned = true;
                     renderer.sprite = stunnedSprite;
+                    if (GameInfo.score > 0)
+                        GameInfo.score--;
+                    scoreText.text = $"No. of Food: {GameInfo.score}";
                     break;
                 }
             }
