@@ -14,10 +14,11 @@ public class TileMapper : MonoBehaviour
     public Vector3 exitPosition;
     public int nextMap;
     public GameObject girl;
+    public Color background;
 
     private void CreateFoodObj(int x, int y)
     {
-        int rndNo = (int)Random.Range(0, 6);
+        int rndNo = Random.Range(0, 6);
         var foodSprite = foodSprites[rndNo]; // Chooses a sprite from foodSprites at random
         var foodObject = Instantiate(foodSprite, transform);
         foodObject.transform.position = new Vector3(x, y);
@@ -75,5 +76,8 @@ public class TileMapper : MonoBehaviour
             var girlInstance = Instantiate(girl);
             girlInstance.transform.position = exitPosition;
         }
+
+        // camera background color
+        Camera.main.backgroundColor = background;
     }
 }

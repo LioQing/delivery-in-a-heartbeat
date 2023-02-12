@@ -62,7 +62,8 @@ MonoBehaviour:
   - {fileID: 5194250471532313980, guid: ff386ba30ffe68549b72577c7e6a864a, type: 3}
   - {fileID: 6835564312421841422, guid: b1abd123a3b34964b858fe9e8e0aeb3b, type: 3}
   - {fileID: 1478597199021968787, guid: 241dc6972b77345459f428c14088018e, type: 3}
-  playerPosition: {x: 1, y: -1, z: 0}
+  playerPosition: {x: 7, y: -7, z: 0}
   exitPosition: {x: 7, y: -1, z: 0}
   nextMap: 1
   girl: {fileID: 0}
+  background: {r: 0.5058824, g: 0.70980394, b: 0.49411768, a: 0}
