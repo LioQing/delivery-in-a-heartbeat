@@ -8,8 +8,11 @@ public class TileMapper : MonoBehaviour
 {
     public string mapFilePath;
     public List<GameObject> tileSprites;
+    public Vector3 playerPosition;
+    public Vector3 exitPosition;
+    public int nextMap;
 
-    private void Start()
+    private void Awake()
     {
         var fullPath = $"{Application.streamingAssetsPath}/{mapFilePath}";
 
@@ -38,7 +41,7 @@ public class TileMapper : MonoBehaviour
             }
         }
 
-        if (lineData is not null && lineData[0] == "-1")
-            GameObject.Find("Player").transform.position = new Vector3(int.Parse(lineData[1]), -int.Parse(lineData[2]));
+        if (lineData is null || lineData[0] != "-1")
+            return;
     }
 }
