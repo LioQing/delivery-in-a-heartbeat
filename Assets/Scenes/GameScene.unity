@@ -486,7 +486,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-<<<<<<< Updated upstream
   m_SpriteSortPoint: 0
 --- !u!1 &1016059059
 GameObject:
@@ -506,10 +505,6 @@ GameObject:
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &1016059060
-=======
-  m_SpriteSortPoint: 1
---- !u!4 &857902214
->>>>>>> Stashed changes
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
