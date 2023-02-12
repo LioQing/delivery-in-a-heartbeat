@@ -428,7 +428,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 809132732}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -486,7 +486,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!1 &857902212
 GameObject:
   m_ObjectHideFlags: 0
@@ -518,13 +518,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mapFilePath: TileMaps/Test Map.txt
   tileSprites:
-  - {fileID: 8988736779684131486, guid: 56d92ae151599d145be1a06633f6fe59, type: 3}
-  - {fileID: 8988736779684131486, guid: b4f8ee584f623c848be5622a3e8a4368, type: 3}
+  - {fileID: 8988736779684131486, guid: d9e79aac296bbeb45b328c1552db3566, type: 3}
+  - {fileID: 8988736779684131486, guid: efdbe7a58343df84488d7c116e222c23, type: 3}
   foodSprites:
   - {fileID: 7169236251565805828, guid: 2db9bfe077a11674dbecf46c1efd9583, type: 3}
   - {fileID: 6543563390836565317, guid: 5e09b2b01b084c849b761d56458ba2e6, type: 3}
   - {fileID: 5194250471532313980, guid: df02abd01590b314e9e9b884a478ecc4, type: 3}
-  - {fileID: 4461287782427808980, guid: 56a8369e18a19f64c83acb0bfabd39c7, type: 3}
+  - {fileID: 5194250471532313980, guid: ff386ba30ffe68549b72577c7e6a864a, type: 3}
   - {fileID: 6835564312421841422, guid: b1abd123a3b34964b858fe9e8e0aeb3b, type: 3}
   - {fileID: 1478597199021968787, guid: 241dc6972b77345459f428c14088018e, type: 3}
 --- !u!4 &857902214
