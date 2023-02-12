@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     private TMP_Text scoreText;
     private bool stunned;
     private Vector3 stunBackPos;
+    private string scoreColor;
 
     private void Start()
     {
@@ -24,11 +25,13 @@ public class PlayerController : MonoBehaviour
         renderer = GetComponentInChildren<SpriteRenderer>();
         stunned = false;
         
+        
         scoreText.text = $"No. of Food: {GameInfo.score}";
     }
     
     private void Update()
     {
+        scoreColor = "white";
         // stun lerp and reset
         if (stunned)
         {
@@ -115,6 +118,7 @@ public class PlayerController : MonoBehaviour
                     Destroy(f);
                     GameInfo.score++;
                     scoreText.text = $"No. of Food: {GameInfo.score}";
+                    scoreColor = "yellow";
                     break;
                 }
             }
@@ -132,9 +136,19 @@ public class PlayerController : MonoBehaviour
                     if (GameInfo.score > 0)
                         GameInfo.score--;
                     scoreText.text = $"No. of Food: {GameInfo.score}";
+                    scoreColor = "red";
                     break;
                 }
             }
         }
+        if (scoreColor == "yellow")
+        {
+            scoreText.color = Color.yellow;
+            Debug.Log("Color yellow!");
+        }
+        else if (scoreColor == "red")
+            scoreText.color = Color.red;
+        else
+            scoreText.color = Color.white;
     }
 }
