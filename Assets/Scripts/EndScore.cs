@@ -20,5 +20,8 @@ public class EndScore : MonoBehaviour
             GetComponent<TMP_Text>().text = "You got it in a heartbeat!\nYou delivered " + GameInfo.score + " food!";
             GameObject.FindGameObjectWithTag("Girl").GetComponent<SpriteRenderer>().sprite = heart;
         }
+        
+        GameInfo.currentMap = 0;
+        GameInfo.score = 0;
     }
 }
