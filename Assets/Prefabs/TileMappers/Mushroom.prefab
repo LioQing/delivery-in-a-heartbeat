@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2343456307643429834}
   - component: {fileID: 2343456307643429833}
   m_Layer: 0
-  m_Name: Grassland
+  m_Name: Mushroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,16 +44,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1054237c3f78f664999d72ad7138e50d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mapFilePath: TileMaps/Grassland.txt
+  mapFilePath: TileMaps/Mushroom.txt
   tileSprites:
-  - {fileID: 8988736779684131486, guid: efdbe7a58343df84488d7c116e222c23, type: 3}
-  - {fileID: 8988736779684131486, guid: 32eedd09bd985d847a588c84a83b2024, type: 3}
-  - {fileID: 8988736779684131486, guid: c08df2d3eb45fce4bbc1e2357493926e, type: 3}
-  - {fileID: 8988736779684131486, guid: c77abe22e163e2e4ea794f1d6b78a5e5, type: 3}
-  - {fileID: 8988736779684131486, guid: d9e79aac296bbeb45b328c1552db3566, type: 3}
-  - {fileID: 8988736779684131486, guid: e8e5a528694f9084e8808f764e3d3903, type: 3}
-  - {fileID: 8988736779684131486, guid: 081dba27a551efe4bae73ab92d75dfad, type: 3}
-  - {fileID: 8988736779684131486, guid: 849839a865c00094ebc31f88ad44e820, type: 3}
+  - {fileID: 8988736779684131486, guid: 1308710ce6720234181c9809bca4c1a7, type: 3}
+  - {fileID: 8988736779684131486, guid: bfdabd5b5522fed44a353e088a449ee5, type: 3}
+  - {fileID: 8988736779684131486, guid: c6635a91464a49046b790b0dfe0e4e24, type: 3}
+  - {fileID: 8988736779684131486, guid: c2aacb2b185a4ca438ea5f55f72bda60, type: 3}
+  - {fileID: 8988736779684131486, guid: b6c57bdf3c12f3346b57fce4a763bf84, type: 3}
+  - {fileID: 8988736779684131486, guid: bf6fa87d7f5bca3499776bc2b58ba7cf, type: 3}
   foodSprites:
   - {fileID: 7169236251565805828, guid: 2db9bfe077a11674dbecf46c1efd9583, type: 3}
   - {fileID: 6543563390836565317, guid: 5e09b2b01b084c849b761d56458ba2e6, type: 3}
@@ -63,4 +61,4 @@ MonoBehaviour:
   - {fileID: 1478597199021968787, guid: 241dc6972b77345459f428c14088018e, type: 3}
   playerPosition: {x: 6, y: -3, z: 0}
   exitPosition: {x: 12, y: -7, z: 0}
-  nextMap: 1
+  nextMap: 2

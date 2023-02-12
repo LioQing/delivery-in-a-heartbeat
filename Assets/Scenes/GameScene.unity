@@ -167,7 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9dbc8a57415ad348b27de09bd1418bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interval: 0.4
+  interval: 0.3
   allowance: 0.2
   timer: 0
   started: 0
@@ -533,7 +533,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b3db1ed6b84beb488592019142ddf83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 0
   standSprite: {fileID: 21300000, guid: 927ce5ea02c73344a8bcd314a6cbe5b6, type: 3}
   stunnedSprite: {fileID: 21300000, guid: 9f41a1bae2a51c14aaf031c476ac4f02, type: 3}
 --- !u!1 &918456315
@@ -702,8 +701,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mappers:
   - {fileID: 2343456307643429832, guid: 86db3d9413fb774448cca233ee288cb0, type: 3}
-  - {fileID: 2343456307643429832, guid: 5c03a822c19cacc41b36559d7f2ef024, type: 3}
+  - {fileID: 2343456307643429832, guid: 01b9a2e22e2d79845bf40d62a98bbfe7, type: 3}
+  - {fileID: 2343456307643429832, guid: cb85edd04b5defe48b6adbbd29a04485, type: 3}
   - {fileID: 2343456307643429832, guid: 115d27dd508d0aa4489aa8f004772465, type: 3}
+  - {fileID: 2343456307643429832, guid: 5c03a822c19cacc41b36559d7f2ef024, type: 3}
   player: {fileID: 0}
   mapper: {fileID: 0}
   isLoading: 0

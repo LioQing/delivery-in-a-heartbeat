@@ -14,6 +14,6 @@ public class CameraBeat : MonoBehaviour
     
     private void Update()
     {
-        GetComponent<Camera>().orthographicSize = Mathf.Lerp(GetComponent<Camera>().orthographicSize, 3f, 0.1f);
+        GetComponent<Camera>().orthographicSize = Mathf.Lerp(GetComponent<Camera>().orthographicSize, 3f, Time.deltaTime * 10f);
     }
 }

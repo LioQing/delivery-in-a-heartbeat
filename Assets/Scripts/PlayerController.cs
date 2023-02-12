@@ -6,12 +6,11 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public int score;
     public Sprite standSprite;
     public Sprite stunnedSprite;
 
     private Heartbeat heartbeat;
-    private SpriteRenderer renderer;
+    private new SpriteRenderer renderer;
     private TMP_Text text;
     private TMP_Text scoreText;
     private bool stunned;
@@ -23,7 +22,6 @@ public class PlayerController : MonoBehaviour
         text = GameObject.Find("BeatText").GetComponent<TMP_Text>();
         scoreText = GameObject.Find("Score").GetComponent<TMP_Text>();
         renderer = GetComponentInChildren<SpriteRenderer>();
-        score = 0;
         stunned = false;
     }
     
@@ -32,7 +30,7 @@ public class PlayerController : MonoBehaviour
         // stun lerp and reset
         if (stunned)
         {
-            transform.position = Vector3.Lerp(transform.position, stunBackPos, 0.1f);
+            transform.position = Vector3.Lerp(transform.position, stunBackPos, Time.deltaTime * 2f);
             if ((transform.position - stunBackPos).magnitude < 0.05f)
             {
                 stunned = false;
@@ -69,13 +67,12 @@ public class PlayerController : MonoBehaviour
 
         if (moved)
         {
-            if (heartbeat.IsBeat() && moved)
+            if (heartbeat.IsBeat())
             {
-                transform.Translate(move);
                 text.color = Color.red;
                 text.text = "Beat!";
             }
-            else if (moved)
+            else
             {
                 switch (UnityEngine.Random.Range(0, 4))
                 {
@@ -92,12 +89,21 @@ public class PlayerController : MonoBehaviour
                         move = new Vector3(1, 0);
                         break;
                 }
-
-                transform.position += move;
+                
                 text.color = Color.white;
                 text.text = "Missed!";
             }
             
+            // girl
+            var girl = GameObject.FindGameObjectWithTag("Girl");
+            if (girl is not null && transform.position + move == girl.transform.position)
+            {
+                girl.GetComponent<GirlBehavior>().Finished();
+                return;
+            }
+            
+            transform.Translate(move);
+
             // food
             var food = GameObject.FindGameObjectsWithTag("Food");
             foreach (var f in food)
@@ -105,8 +111,8 @@ public class PlayerController : MonoBehaviour
                 if (f.transform.position == transform.position)
                 {
                     Destroy(f);
-                    score++;
-                    scoreText.text = $"No. of Food: {score}";
+                    GameInfo.score++;
+                    scoreText.text = $"No. of Food: {GameInfo.score}";
                     break;
                 }
             }

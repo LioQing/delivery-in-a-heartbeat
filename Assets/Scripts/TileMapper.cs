@@ -13,6 +13,7 @@ public class TileMapper : MonoBehaviour
     public Vector3 playerPosition;
     public Vector3 exitPosition;
     public int nextMap;
+    public GameObject girl;
 
     private void CreateFoodObj(int x, int y)
     {
@@ -66,6 +67,13 @@ public class TileMapper : MonoBehaviour
                 else
                     Debug.Log("Unknown item id. Loop: " + y);
             }
+        }
+
+        // spawn girl
+        if (nextMap == -1)
+        {
+            var girlInstance = Instantiate(girl);
+            girlInstance.transform.position = exitPosition;
         }
     }
 }

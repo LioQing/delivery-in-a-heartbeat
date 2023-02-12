@@ -11,15 +11,20 @@ public class SceneManager : MonoBehaviour
 
     private void Start()
     {
-        mapper = Instantiate(mappers[SceneInfo.currentMap]).GetComponent<TileMapper>();
+        mapper = Instantiate(mappers[GameInfo.currentMap]).GetComponent<TileMapper>();
         player = GameObject.Find("Player");
         player.transform.position = mapper.playerPosition;
         isLoading = false;
+
+        if (GameInfo.currentMap == 0)
+        {
+            GameInfo.score = 0;
+        }
     }
     
     private void Update()
     {
-        if (player.transform.position == mapper.exitPosition && !isLoading)
+        if (player.transform.position == mapper.exitPosition && !isLoading && mapper.nextMap > 0)
         {
             isLoading = true;
             LoadMap(mapper.nextMap);
@@ -28,7 +33,7 @@ public class SceneManager : MonoBehaviour
 
     public void LoadMap(int map)
     {
-        SceneInfo.currentMap = map;
+        GameInfo.currentMap = map;
         UnityEngine.SceneManagement.SceneManager.LoadScene(0);
     }
 }
