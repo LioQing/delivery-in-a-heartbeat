@@ -24,7 +24,6 @@ public class TileMapper : MonoBehaviour
 
         var fileData = File.ReadAllText(fullPath);
         var lines = fileData.Split('\n');
-<<<<<<< Updated upstream
         string[] lineData = null;
 
         for (int y = 0; y < lines.Length; y++)
