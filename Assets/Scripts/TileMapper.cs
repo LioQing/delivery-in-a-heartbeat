@@ -32,16 +32,29 @@ public class TileMapper : MonoBehaviour
             if (lineData.Length == 0 || lineData[0] == "-1")
                 break;
 
-            for (int x = 0; x < lineData.Length; x++)
+            if (lineData[0] == "-1")
+                mapEnd = 1;
+
+            if (mapEnd == 0)
             {
-                var tileIndex = int.Parse(lineData[x]);
-                var tileSprite = tileSprites[tileIndex];
-                var tileObject = Instantiate(tileSprite, transform);
-                tileObject.transform.position = new Vector3(x, -y);
+                for (int x = 0; x < lineData.Length; x++) // Read tile map line
+                {
+                    var tileIndex = int.Parse(lineData[x]);
+                    var tileSprite = tileSprites[tileIndex];
+                    var tileObject = Instantiate(tileSprite, transform);
+                    tileObject.transform.position = new Vector3(x, -y);
+                }
+            }
+            else if (mapEnd == 1 && lineData is not null && lineData.Length != 0)
+            {
+                if (lineData[0] == "0") // Initialize food positions
+                {
+                    Debug.Log("Instatiated food, x: " + int.Parse(lineData[1]) + ", y: {0}" + int.Parse(lineData[2]) + " loop: " + y);
+                    CreateFoodObj(int.Parse(lineData[1]), -int.Parse(lineData[2]));
+                }
+                else
+                    Debug.Log("Unknown item id. Loop: " + y);
             }
         }
-
-        if (lineData is null || lineData[0] != "-1")
-            return;
     }
 }
