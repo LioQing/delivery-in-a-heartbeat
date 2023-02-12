@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
         scoreText = GameObject.Find("Score").GetComponent<TMP_Text>();
         renderer = GetComponentInChildren<SpriteRenderer>();
         stunned = false;
-
+        
         scoreText.text = $"No. of Food: {GameInfo.score}";
     }
     
