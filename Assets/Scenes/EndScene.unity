@@ -181,7 +181,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press Space to restart game...
+  m_text: Press Space to Restart Game...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 40dfe3c3c4a99ac4696c30c4fb90a9ef, type: 2}
   m_sharedMaterial: {fileID: -1606799081474915033, guid: 40dfe3c3c4a99ac4696c30c4fb90a9ef, type: 2}
@@ -438,7 +438,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf7f1289e8d8a6547b970bbec1076d71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneIndex: 1
+  sceneIndex: 0
 --- !u!212 &1081372086
 SpriteRenderer:
   m_ObjectHideFlags: 0

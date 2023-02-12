@@ -34,6 +34,6 @@ public class SceneManager : MonoBehaviour
     public void LoadMap(int map)
     {
         GameInfo.currentMap = map;
-        UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(0);
+        UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(1);
     }
 }
