@@ -25,7 +25,7 @@ public class TileMapper : MonoBehaviour
     private void Awake()
     {
         var fullPath = $"{Application.streamingAssetsPath}/{mapFilePath}";
-           
+
         if (!File.Exists(fullPath))
         {
             Debug.LogError("Map file not found at " + fullPath);
@@ -62,7 +62,6 @@ public class TileMapper : MonoBehaviour
                 {
                     if (lineData[0] == "-1") // Initialize player position
                         GameObject.Find("Player").transform.position = new Vector3(int.Parse(lineData[1]), -int.Parse(lineData[2]));
-
                     else if (lineData[0] == "0") // Initialize food positions
                     {
                         Debug.Log("Instatiated food, x: " + int.Parse(lineData[1]) + ", y: {0}" + int.Parse(lineData[2]) + " loop: " + y);
