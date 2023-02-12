@@ -13,7 +13,7 @@ public class GirlBehavior : MonoBehaviour
     private void Start()
     {
         renderer = GetComponentInChildren<SpriteRenderer>();
-        endTime = 3f;
+        endTime = 1f;
     }
 
     private void Update()
