@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         heartbeat = GameObject.Find("Heartbeat").GetComponent<Heartbeat>();
-        text = GameObject.Find("DebugText").GetComponent<TMP_Text>();
+        text = GameObject.Find("BeatText").GetComponent<TMP_Text>();
         scoreText = GameObject.Find("Score").GetComponent<TMP_Text>();
         score = 0;
     }
