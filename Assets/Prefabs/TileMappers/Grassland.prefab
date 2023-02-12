@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2343456307643429834}
   - component: {fileID: 2343456307643429833}
   m_Layer: 0
-  m_Name: TileMapper
+  m_Name: Grassland
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1054237c3f78f664999d72ad7138e50d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mapFilePath: TileMaps/Test Map.txt
+  mapFilePath: TileMaps/Grassland.txt
   tileSprites:
   - {fileID: 8988736779684131486, guid: efdbe7a58343df84488d7c116e222c23, type: 3}
   - {fileID: 8988736779684131486, guid: 32eedd09bd985d847a588c84a83b2024, type: 3}
@@ -52,7 +52,8 @@ MonoBehaviour:
   - {fileID: 8988736779684131486, guid: c77abe22e163e2e4ea794f1d6b78a5e5, type: 3}
   - {fileID: 8988736779684131486, guid: d9e79aac296bbeb45b328c1552db3566, type: 3}
   - {fileID: 8988736779684131486, guid: e8e5a528694f9084e8808f764e3d3903, type: 3}
-  - {fileID: 8988736779684131486, guid: 38663fbd64ba2ce45907d46cdfac50df, type: 3}
+  - {fileID: 8988736779684131486, guid: 081dba27a551efe4bae73ab92d75dfad, type: 3}
+  - {fileID: 8988736779684131486, guid: 849839a865c00094ebc31f88ad44e820, type: 3}
   foodSprites:
   - {fileID: 7169236251565805828, guid: 2db9bfe077a11674dbecf46c1efd9583, type: 3}
   - {fileID: 6543563390836565317, guid: 5e09b2b01b084c849b761d56458ba2e6, type: 3}
@@ -62,4 +63,4 @@ MonoBehaviour:
   - {fileID: 1478597199021968787, guid: 241dc6972b77345459f428c14088018e, type: 3}
   playerPosition: {x: 6, y: -3, z: 0}
   exitPosition: {x: 14, y: -7, z: 0}
-  nextMap: 1
+  nextMap: 0

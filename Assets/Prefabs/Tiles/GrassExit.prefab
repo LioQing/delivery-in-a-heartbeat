@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 6683768809824273446}
   - component: {fileID: 692148245365873094}
   m_Layer: 0
-  m_Name: Missing Tile
-  m_TagString: Untagged
+  m_Name: GrassExit
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b5587d0e354cf504fb9d3473bc1c906c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2373f25833c4474498d7dde8d664f86c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
